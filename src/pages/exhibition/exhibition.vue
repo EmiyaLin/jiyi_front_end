@@ -1,14 +1,14 @@
 <template>
-<div>
-  <router-link to="/exhibition/exhibitionHome"></router-link>
-  <router-link to="/exhibition/welfare"></router-link>
-  <router-link to="/exhibition/digitalMall"></router-link>
-  <router-link to="/exhibition/enter"></router-link>
-  <router-link to="/exhibition/allWorks"></router-link>
   <div>
-    <router-view></router-view>
+    <router-link to="/exhibition/exhibitionHome"></router-link>
+    <router-link to="/exhibition/welfare"></router-link>
+    <router-link to="/exhibition/digitalMall"></router-link>
+    <router-link to="/exhibition/enter"></router-link>
+    <router-link to="/exhibition/allWorks"></router-link>
+    <div>
+      <router-view></router-view>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -23,16 +23,15 @@ export default {
   data() {
     return {
       normalTitle: [
-        {title: "首页", url: "/home"},
-        {title: "数字展馆", url: "/exhibition/exhibitionHome"},
-        {title: "创作者家园", url: "/DigitalArtwork"},
-        {title: "我的", url: "/userProfile/" + this.$store.state.token === "" ? "login" : "userInfo"}
+        { title: "首页", url: "/home" },
+        { title: "非遗星球", url: "/nonHeritagePlanet/nonHeritagePlanet" },
+        { title: "数字展馆", url: "/exhibition/exhibitionHome" },
+        { title: "创作者家园", url: "/DigitalArtwork/Work" },
+        { title: "我的", url: this.$cookies.get('token') === null ? "/userProfile/login" : "/userProfile/userInfo" }
       ]
     }
   }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
