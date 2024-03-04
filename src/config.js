@@ -2,7 +2,7 @@ import axios from 'axios'
 import VueCookies from 'vue-cookies'
 
 const axio = axios.create({
-  baseURL: 'https://api.ichrecorder.com',
+  baseURL: 'https://api.ichol.tech',
   timeout: 5000
 })
 
